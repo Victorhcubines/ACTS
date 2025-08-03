@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Denúncia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Nova Denúncia</h1>
+
+  <form id="form-denuncia">
+    <label for="tipo">Tipo de problema:</label><br>
+    <select id="tipo" name="tipo">
+      <option value="buraco">Buraco na rua</option>
+      <option value="lixo">Acúmulo de lixo</option>
+      <option value="iluminacao">Iluminação pública</option>
+      <option value="outro">Outro</option>
+    </select><br><br>
+
+    <label for="endereco">Endereço:</label><br>
+    <input type="text" id="endereco" name="endereco"><br><br>
+
+    <label for="descricao">Descrição:</label><br>
+    <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea><br><br>
+
+    <label for="imagem">Imagem (opcional):</label><br>
+    <input type="file" id="imagem" accept="image/*"><br><br>
+
+    <label for="urgencia">Urgência estimada:</label><br>
+    <output id="grau-urgencia">---</output><br><br>
+
+    <div id="mapa" style="height: 300px; width: 100%; background: #ccc;">
+      <!-- Aqui será integrado o mapa futuramente -->
+      <p style="padding: 1em;">Mapa interativo em breve...</p>
+    </div><br>
+
+    <button type="submit">Enviar denúncia</button>
+  </form>
+
+  <script src="js/denuncia.js"></script>
+</body>
+</html>
