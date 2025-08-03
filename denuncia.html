@@ -2,41 +2,111 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Registrar Denúncia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.C.T.S. - A Cidade Também é Sua</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #116530;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav button, nav a {
+      margin-left: 8px;
+      background-color: #ffffff;
+      border: none;
+      color: #116530;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .denuncia-item {
+      background-color: white;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #btn-denunciar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #116530;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    @media (orientation: landscape) {
+      body {
+        flex-direction: row;
+      }
+      main {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Nova Denúncia</h1>
+  <header>
+    <img src="assets/logo/ACTS 2.png" alt="Logo ACTS">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="transparencia.html">Transparência</a>
+      <button onclick="openLogin()">Login</button>
+      <button onclick="openRegister()">Criar conta</button>
+    </nav>
+  </header>
 
-  <form id="form-denuncia">
-    <label for="tipo">Tipo de problema:</label><br>
-    <select id="tipo" name="tipo">
-      <option value="buraco">Buraco na rua</option>
-      <option value="lixo">Acúmulo de lixo</option>
-      <option value="iluminacao">Iluminação pública</option>
-      <option value="outro">Outro</option>
-    </select><br><br>
+  <main>
+    <h2>Denúncias Recentes</h2>
+    <div id="denuncias-container">
+      <div class="denuncia-item">Buraco na Rua - Rua das Laranjeiras</div>
+      <div class="denuncia-item">Falta de Iluminação - Av. Brasil</div>
+      <div class="denuncia-item">Lixo Acumulado - Travessa Boa Vista</div>
+    </div>
+  </main>
 
-    <label for="endereco">Endereço:</label><br>
-    <input type="text" id="endereco" name="endereco"><br><br>
+  <button id="btn-denunciar" onclick="location.href='denuncia.html'">+</button>
 
-    <label for="descricao">Descrição:</label><br>
-    <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea><br><br>
-
-    <label for="imagem">Imagem (opcional):</label><br>
-    <input type="file" id="imagem" accept="image/*"><br><br>
-
-    <label for="urgencia">Urgência estimada:</label><br>
-    <output id="grau-urgencia">---</output><br><br>
-
-    <div id="mapa" style="height: 300px; width: 100%; background: #ccc;">
-      <!-- Aqui será integrado o mapa futuramente -->
-      <p style="padding: 1em;">Mapa interativo em breve...</p>
-    </div><br>
-
-    <button type="submit">Enviar denúncia</button>
-  </form>
-
-  <script src="js/denuncia.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>
