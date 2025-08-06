@@ -1,0 +1,199 @@
+
+/* Add font files for Instrument Sans */
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('fonts/instrument-sans.woff2') format('woff2'),
+       url('fonts/instrument-sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-family-instrument-sans: 'Instrument Sans', sans-serif;
+  --text-black: rgba(0, 0, 0, 1);
+  --text-white: rgba(255, 255, 255, 1);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rectangle-1-2 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(65, 65, 65, 1);
+}
+
+.rectangle-2-3 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(190, 190, 190, 1);
+}
+
+.line-1-4 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border: 11px solid rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+.line-2-5 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border: 11px solid rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+.rectangle-5-6 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(217, 217, 217, 1);
+}
+
+.line-3-7 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border: 11px solid rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+.union-8 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  fill: rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+.union-9 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  fill: rgba(188, 188, 188, 1);
+  border: none;
+  outline: none;
+}
+
+.union-10 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  fill: rgba(217, 217, 217, 1);
+  border: none;
+  outline: none;
+}
+
+.text-11 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-instrument-sans);
+  font-weight: 700;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.text-12 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-instrument-sans);
+  font-weight: 700;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.text-13 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-instrument-sans);
+  font-weight: 700;
+  font-size: 64px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.rectangle-4-14 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(98, 161, 255, 1);
+}
+
+.text-15 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-instrument-sans);
+  font-weight: 700;
+  font-size: 40px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.acts-2-1-16 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
+  height: auto;
+}
+
+.desktop-1-1 {
+@media (max-width: 1440px) {
+  .desktop-1-1 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-1-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(255, 255, 255, 1);
+}
